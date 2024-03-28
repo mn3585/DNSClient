@@ -1,4 +1,5 @@
 import dns.resolver
+pip install dnspython
 
 # Set the IP address of the local DNS server and a public DNS server
 local_host_ip = 192.168.17.1
