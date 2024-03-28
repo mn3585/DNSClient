@@ -1,7 +1,7 @@
 import dns.resolver
 
 # Set the IP address of the local DNS server and a public DNS server
-local_host_ip = 192.168.1.1
+local_host_ip = 192.168.17.1
 real_name_server = 8.8.8.8 # Research public DNS servers to find a valid DNS server IP address to use
 
 
@@ -12,7 +12,7 @@ domainList  = ['example.com.','safebank.com.','google.com.','nyu.edu.','legitsit
 def query_local_dns_server(domain,question_type):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = local_host_ip
-    answers = resolver.resolve(domain, ????) # provide the domain and question_type
+    answers = resolver.resolve(domain, question_type) # provide the domain and question_type
 
     ip_address = answers[0].to_text()
     return ip_address   
@@ -21,7 +21,7 @@ def query_local_dns_server(domain,question_type):
 def query_dns_server(domain,question_type):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [real_name_server]
-    answers = resolver.resolve(domain, question_type) # provide the domain and question_type
+    answers = resolver.resolve(domain,question_type) # provide the domain and question_type
 
     ip_address = answers[0].to_text()
     return ip_address
