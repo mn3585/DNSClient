@@ -1,5 +1,4 @@
 import dns.resolver
-#pip install dnspython
 
 # Set the IP address of the local DNS server and a public DNS server
 local_host_ip = "192.168.17.1"
@@ -68,6 +67,6 @@ if __name__ == '__main__':
     # Call the function to compare the results from both DNS servers and print the result
     result = compare_dns_servers(domainList,question_type)
     result = query_local_dns_server('nyu.edu.',question_type)
-    print(result)
+    #print(result)
     
     #print(exfiltrate_info())
