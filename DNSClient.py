@@ -38,17 +38,17 @@ def compare_dns_servers(domainList,question_type):
     
 # Define a function to print the results from querying both the local and public DNS servers for each domain name in the domainList
 def local_external_DNS_output(question_type):    
-    print("Local DNS Server")
+    #print("Local DNS Server")
     for domain_name in domainList:
         ip_address = query_local_dns_server(domain_name,question_type)
-        print(f"The IP address of {domain_name} is {ip_address}")
+        #print(f"The IP address of {domain_name} is {ip_address}")
 
 
     #print("\nPublic DNS Server")
 
     for domain_name in domainList:
         ip_address = query_dns_server(domain_name,question_type)
-        print(f"The IP address of {domain_name} is {ip_address}")
+        #print(f"The IP address of {domain_name} is {ip_address}")
         
         
 def exfiltrate_info(domain,question_type): # testing method for part 2
